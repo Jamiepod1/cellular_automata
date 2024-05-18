@@ -27,6 +27,12 @@ class CellularAutomaton(Cell):
             self.grid.append(row)
             starting_y -= 10
 
+
+
+    def ruleset(three_bit_neighbourhood_representation: str, output_pattern: str):
+        base_10_neighbourhood_representation = int(three_bit_neighbourhood_representation, 2)
+        return output_pattern[base_10_neighbourhood_representation]
+
 screen = t.Screen()
 screen.tracer(0)
 instance = CellularAutomaton(51,51)
