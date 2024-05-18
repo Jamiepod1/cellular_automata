@@ -9,20 +9,16 @@ class Cell(t.Turtle):
         self.shapesize(stretch_wid=1, stretch_len=1, outline=0)
         self.penup()
 
-    def __str__(self):
+    def __repr__(self):
         return f"{self.xcor()}, {self.ycor()}"
     
 
-    def on(self):
+    def change_state(self, state):
+        self.state = state
         if self.state == 0:
-            self.state = 1
-            self.color("black")
-
-
-    def off(self):
-        if self.state == 1:
-            self.state = 0
             self.color("white")
+        elif self.state == 1:
+            self.color('black')
 
 
 if __name__ == '__main__':
